@@ -14,7 +14,7 @@ document.querySelector('#app').innerHTML = `
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero finisher-header">
     <div class="hero-content">
       <h1 class="hero-title">NeuroLink AI</h1>
       <p class="hero-subtitle">Your mind. Amplified.</p>
@@ -114,3 +114,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   })
 })
+
+// Initialize Finisher Header for animated particle background
+setTimeout(() => {
+  if (typeof FinisherHeader !== 'undefined') {
+    new FinisherHeader({
+      "count": 50,
+      "size": {
+        "min": 2,
+        "max": 80,
+        "pulse": 0.2
+      },
+      "speed": {
+        "x": {
+          "min": 0.1,
+          "max": 0.6
+        },
+        "y": {
+          "min": 0.1,
+          "max": 0.6
+        }
+      },
+      "colors": {
+        "background": "transparent",
+        "particles": [
+          "#0071e3",
+          "#00ff88",
+          "#ffffff",
+          "#64b5f6"
+        ]
+      },
+      "blending": "screen",
+      "opacity": {
+        "center": 0.8,
+        "edge": 0.1
+      },
+      "skew": 0,
+      "shapes": [
+        "c"
+      ]
+    })
+  }
+}, 100)

@@ -146,6 +146,16 @@ body::before {
   overflow: hidden;
 }
 
+/* Finisher Header Canvas Positioning */
+.hero.finisher-header canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 /* Animated particles background */
 .hero::before {
   content: '';
