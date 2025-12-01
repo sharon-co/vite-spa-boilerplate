@@ -116,43 +116,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 })
 
 // Initialize Finisher Header for animated particle background
-setTimeout(() => {
+function initFinisherHeader() {
   if (typeof FinisherHeader !== 'undefined') {
     new FinisherHeader({
-      "count": 50,
+      "count": 150,
       "size": {
-        "min": 2,
-        "max": 80,
-        "pulse": 0.2
+        "min": 20,
+        "max": 150,
+        "pulse": 0.5
       },
       "speed": {
         "x": {
-          "min": 0.1,
-          "max": 0.6
+          "min": 0.2,
+          "max": 1.2
         },
         "y": {
-          "min": 0.1,
-          "max": 0.6
+          "min": 0.2,
+          "max": 1.2
         }
       },
       "colors": {
         "background": "transparent",
         "particles": [
-          "#0071e3",
           "#00ff88",
-          "#ffffff",
-          "#64b5f6"
+          "#0071e3",
+          "#64b5f6",
+          "#4fc3f7",
+          "#80deea"
         ]
       },
-      "blending": "screen",
+      "blending": "overlay",
       "opacity": {
-        "center": 0.8,
-        "edge": 0.1
+        "center": 0.9,
+        "edge": 0.2
       },
       "skew": 0,
       "shapes": [
         "c"
       ]
     })
+    console.log('Finisher Header initialized with enhanced visibility!')
+  } else {
+    console.log('FinisherHeader not loaded yet, retrying...')
+    setTimeout(initFinisherHeader, 100)
   }
-}, 100)
+}
+
+// Wait for everything to load then initialize
+setTimeout(initFinisherHeader, 500)
