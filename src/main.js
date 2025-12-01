@@ -163,4 +163,7 @@ function initFinisherHeader() {
 }
 
 // Wait for everything to load then initialize
-setTimeout(initFinisherHeader, 500)
+// Try multiple times with increasing delays
+setTimeout(initFinisherHeader, 1000)
+setTimeout(initFinisherHeader, 2000)
+setTimeout(initFinisherHeader, 3000)
