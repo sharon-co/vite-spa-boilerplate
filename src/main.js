@@ -119,36 +119,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 function initFinisherHeader() {
   if (typeof FinisherHeader !== 'undefined') {
     new FinisherHeader({
-      "count": 150,
+      "count": 200,
       "size": {
-        "min": 20,
-        "max": 150,
-        "pulse": 0.5
+        "min": 50,
+        "max": 250,
+        "pulse": 1
       },
       "speed": {
         "x": {
-          "min": 0.2,
-          "max": 1.2
+          "min": 0.3,
+          "max": 1.5
         },
         "y": {
-          "min": 0.2,
-          "max": 1.2
+          "min": 0.3,
+          "max": 1.5
         }
       },
       "colors": {
         "background": "transparent",
         "particles": [
           "#00ff88",
-          "#0071e3",
-          "#64b5f6",
-          "#4fc3f7",
-          "#80deea"
+          "#00ffff",
+          "#ffffff",
+          "#ffff00",
+          "#ff00ff"
         ]
       },
-      "blending": "overlay",
+      "blending": "lighten",
       "opacity": {
-        "center": 0.9,
-        "edge": 0.2
+        "center": 1,
+        "edge": 0.5
       },
       "skew": 0,
       "shapes": [
