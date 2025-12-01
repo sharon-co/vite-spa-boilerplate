@@ -31,13 +31,11 @@ export class ParticleSystem {
   }
 
   init() {
-    const particleCount = 100
+    const particleCount = 20
     const colors = [
-      { r: 0, g: 255, b: 136 },    // Tech green
       { r: 0, g: 113, b: 227 },    // Blue
       { r: 100, g: 181, b: 246 },  // Light blue
       { r: 255, g: 255, b: 255 },  // White
-      { r: 0, g: 255, b: 255 },    // Cyan
     ]
 
     for (let i = 0; i < particleCount; i++) {
@@ -45,22 +43,22 @@ export class ParticleSystem {
       this.particles.push({
         x: Math.random() * this.canvas.width,
         y: Math.random() * this.canvas.height,
-        size: Math.random() * 100 + 50,
-        speedX: (Math.random() - 0.5) * 1.5,
-        speedY: (Math.random() - 0.5) * 1.5,
+        size: Math.random() * 30 + 15,
+        speedX: (Math.random() - 0.5) * 0.3,
+        speedY: (Math.random() - 0.5) * 0.3,
         color: color,
-        alpha: Math.random() * 0.5 + 0.3,
-        pulseSpeed: Math.random() * 0.02 + 0.01,
+        alpha: Math.random() * 0.15 + 0.05,
+        pulseSpeed: Math.random() * 0.005 + 0.002,
         pulsePhase: Math.random() * Math.PI * 2,
       })
     }
   }
 
   drawParticle(particle) {
-    // Pulsing effect
+    // Subtle pulsing effect
     const pulse = Math.sin(Date.now() * particle.pulseSpeed + particle.pulsePhase)
-    const currentSize = particle.size + pulse * 20
-    const currentAlpha = particle.alpha + pulse * 0.2
+    const currentSize = particle.size + pulse * 5
+    const currentAlpha = particle.alpha + pulse * 0.05
 
     // Create radial gradient for glow effect
     const gradient = this.ctx.createRadialGradient(
@@ -90,9 +88,8 @@ export class ParticleSystem {
   }
 
   animate() {
-    // Clear canvas with slight fade effect for trails
-    this.ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
-    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
+    // Clear canvas completely (no trails for clean look)
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
     // Update and draw particles
     this.particles.forEach(particle => {
