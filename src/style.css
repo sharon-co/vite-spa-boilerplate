@@ -146,19 +146,6 @@ body::before {
   overflow: hidden;
 }
 
-/* Finisher Header Canvas Positioning */
-.hero.finisher-header canvas {
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5 !important;
-  opacity: 1 !important;
-  filter: brightness(1.5) saturate(1.5) blur(2px);
-  mix-blend-mode: lighten;
-}
-
 /* Animated particles background */
 .hero::before {
   content: '';

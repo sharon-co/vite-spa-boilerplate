@@ -1,4 +1,5 @@
 import './style.css'
+import { ParticleSystem } from './particles.js'
 
 document.querySelector('#app').innerHTML = `
   <!-- Navigation -->
@@ -14,7 +15,7 @@ document.querySelector('#app').innerHTML = `
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero finisher-header">
+  <section class="hero">
     <div class="hero-content">
       <h1 class="hero-title">NeuroLink AI</h1>
       <p class="hero-subtitle">Your mind. Amplified.</p>
@@ -115,55 +116,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   })
 })
 
-// Initialize Finisher Header for animated particle background
-function initFinisherHeader() {
-  if (typeof FinisherHeader !== 'undefined') {
-    new FinisherHeader({
-      "count": 200,
-      "size": {
-        "min": 50,
-        "max": 250,
-        "pulse": 1
-      },
-      "speed": {
-        "x": {
-          "min": 0.3,
-          "max": 1.5
-        },
-        "y": {
-          "min": 0.3,
-          "max": 1.5
-        }
-      },
-      "colors": {
-        "background": "transparent",
-        "particles": [
-          "#00ff88",
-          "#00ffff",
-          "#ffffff",
-          "#ffff00",
-          "#ff00ff"
-        ]
-      },
-      "blending": "lighten",
-      "opacity": {
-        "center": 1,
-        "edge": 0.5
-      },
-      "skew": 0,
-      "shapes": [
-        "c"
-      ]
-    })
-    console.log('Finisher Header initialized with enhanced visibility!')
-  } else {
-    console.log('FinisherHeader not loaded yet, retrying...')
-    setTimeout(initFinisherHeader, 100)
-  }
+// Initialize custom particle system
+const heroSection = document.querySelector('.hero')
+if (heroSection) {
+  const particleSystem = new ParticleSystem(heroSection)
+  console.log('Custom particle system initialized!')
 }
-
-// Wait for everything to load then initialize
-// Try multiple times with increasing delays
-setTimeout(initFinisherHeader, 1000)
-setTimeout(initFinisherHeader, 2000)
-setTimeout(initFinisherHeader, 3000)
