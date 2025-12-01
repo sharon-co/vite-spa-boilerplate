@@ -40,7 +40,16 @@ document.querySelector('#app').innerHTML = `
       <button class="btn-outline">Explore the science</button>
     </div>
     <div class="feature-visual">
-      <div class="neural-network"></div>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/LNHBMFCzznE?si=-4F3eyvCfBggK10_"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
   </section>
 
