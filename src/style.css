@@ -754,12 +754,12 @@ body::before {
   z-index: 2;
 }
 
-.lottie-container lottie-player {
+.lottie-container dotlottie-wc {
   filter: drop-shadow(0 10px 30px rgba(0, 113, 227, 0.3));
   transition: var(--transition-slow);
 }
 
-.section:hover .lottie-container lottie-player {
+.section:hover .lottie-container dotlottie-wc {
   filter: drop-shadow(0 15px 40px rgba(0, 113, 227, 0.4));
 }
 
