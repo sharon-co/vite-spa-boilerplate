@@ -1,4 +1,4 @@
-# Vite SPA Boilerplate
+ # Vite SPA Boilerplate
 
 A modern boilerplate for building Single Page Applications (SPA) with Vite.
 

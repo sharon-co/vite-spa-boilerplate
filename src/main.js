@@ -1,5 +1,6 @@
 import './style.css'
 import { ParticleSystem } from './particles.js'
+import '@lottiefiles/lottie-player'
 
 document.querySelector('#app').innerHTML = `
   <!-- Navigation -->
@@ -54,9 +55,18 @@ document.querySelector('#app').innerHTML = `
   </section>
 
   <!-- Feature Section 2 - Light -->
-  <section class="section section-light">
+  <section class="section section-light section-realtime">
     <div class="feature-visual">
-      <div class="brain-visual"></div>
+      <div class="lottie-container">
+        <lottie-player
+          src="https://lottie.host/18df1ba7-e44d-4f47-a2ea-e39c1bdbe820/UYSrcXwbf1.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 400px; height: 400px;"
+          loop
+          autoplay>
+        </lottie-player>
+      </div>
     </div>
     <div class="section-content">
       <h2 class="section-title">Real-time insights</h2>
