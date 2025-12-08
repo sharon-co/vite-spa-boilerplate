@@ -69,3 +69,7 @@ When modifying this application:
 - Edit `src/style.css` for visual changes, animations, or responsive behavior
 - Vite's HMR will automatically reload changes in the browser
 - To add images/assets for the brain-wave device, place them in `public/` and reference with absolute paths (e.g., `/device-image.png`)
+
+## Git Commit Guidelines
+- After each code change, make sure to commit and push it
+- NEVER add Claude Code attribution messages or Co-Authored-By tags to git commits
