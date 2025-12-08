@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Reusable feature card component with proper accessibility
 function FeatureCard({ icon, title, description }) {
   return (

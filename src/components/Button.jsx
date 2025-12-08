@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Reusable accessible button component
 function Button({
   children,

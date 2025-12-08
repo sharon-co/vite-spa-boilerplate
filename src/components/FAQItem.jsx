@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 // Accessible FAQ accordion item using button + region pattern
 function FAQItem({ question, answer, isActive, onToggle, id }) {
